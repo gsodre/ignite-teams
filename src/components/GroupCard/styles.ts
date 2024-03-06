@@ -20,7 +20,7 @@ export const Title = styled.Text`
   text-align: center;
 
   color: ${({ theme }) => theme.COLORS.GRAY_200};
-  font-size: ${({ theme }) => theme.FONT_SIZE.MD};
+  font-size: ${({ theme }) => theme.FONT_SIZE.MD}px;
   font-family: ${({ theme }) => theme.FONT_FAMILY.REGULAR};
 `;
 
