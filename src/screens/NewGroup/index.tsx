@@ -1,15 +1,10 @@
-import { Header } from "@components/Header";
-import { Container, Content, Icon } from "./styles";
-import { GroupCard } from "@components/GroupCard";
-import { Highlight } from "@components/Highlight";
-import { useState } from "react";
-import { FlatList } from "react-native";
-import { ListEmpty } from "@components/ListEmpty";
+import { Input } from "@components/Input";
 import { Button } from "@components/Button";
+import { Header } from "@components/Header";
+import { Highlight } from "@components/Highlight";
+import { Container, Content, Icon } from "./styles";
 
 export function NewGroup() {
-  const [groups, setGroups] = useState<string[]>([]);
-
   return (
     <Container>
       <Header showBackButton />
@@ -21,6 +16,10 @@ export function NewGroup() {
           subtitle="crie a turma para adicionar as pessoas"
         />
       </Content>
+
+      <Input />
+
+      <Button title="Criar" style={{ marginTop: 20 }} />
     </Container>
   );
 }
