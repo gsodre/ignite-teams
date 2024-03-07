@@ -17,7 +17,7 @@ export function NewGroup() {
         />
       </Content>
 
-      <Input />
+      <Input placeholder="Nome da turma" />
 
       <Button title="Criar" style={{ marginTop: 20 }} />
     </Container>
