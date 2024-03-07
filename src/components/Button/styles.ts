@@ -1,4 +1,3 @@
-import { UsersThree } from "phosphor-react-native";
 import { TouchableOpacity } from "react-native";
 import styled from "styled-components/native";
 
