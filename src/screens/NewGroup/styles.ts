@@ -3,8 +3,8 @@ import styled from "styled-components/native";
 
 export const Container = styled.View`
   flex: 1;
-  background-color: ${({ theme }) => theme.COLORS.GRAY_600};
   padding: 24px;
+  background-color: ${({ theme }) => theme.COLORS.GRAY_600};
 `;
 
 export const Content = styled.View`
@@ -14,8 +14,8 @@ export const Content = styled.View`
 
 export const Icon = styled(UsersThree).attrs(({ theme }) => ({
   size: 56,
-  color: theme.COLORS.GREEN_700,
   weight: "fill",
+  color: theme.COLORS.GREEN_700,
 }))`
   align-self: center;
 `;
