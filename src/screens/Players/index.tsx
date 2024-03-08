@@ -1,8 +1,9 @@
 import { Header } from "@components/Header";
-import { Container } from "./styles";
+import { Container, Form } from "./styles";
 import { Highlight } from "@components/Highlight";
 import { useState } from "react";
 import { ButtonIcon } from "@components/ButtonIcon";
+import { Input } from "@components/Input";
 
 export function Players() {
   const [groups, setGroups] = useState<string[]>([]);
@@ -16,7 +17,10 @@ export function Players() {
         subtitle="adicione a galere e separe os times!"
       />
 
-      <ButtonIcon title="" />
+      <Form>
+        <Input placeholder="Nome da pessoa" autoCorrect={false} />
+        <ButtonIcon icon="add" />
+      </Form>
     </Container>
   );
 }
