@@ -1,13 +1,12 @@
-import { Header } from "@components/Header";
-import { Container, Form } from "./styles";
-import { Highlight } from "@components/Highlight";
-import { useState } from "react";
-import { ButtonIcon } from "@components/ButtonIcon";
 import { Input } from "@components/Input";
+import { Filter } from "@components/Filter";
+import { Header } from "@components/Header";
+import { Highlight } from "@components/Highlight";
+import { ButtonIcon } from "@components/ButtonIcon";
+
+import { Container, Form } from "./styles";
 
 export function Players() {
-  const [groups, setGroups] = useState<string[]>([]);
-
   return (
     <Container>
       <Header showBackButton />
@@ -21,6 +20,8 @@ export function Players() {
         <Input placeholder="Nome da pessoa" autoCorrect={false} />
         <ButtonIcon icon="add" />
       </Form>
+
+      <Filter title="Time A" isActive />
     </Container>
   );
 }
