@@ -1,5 +1,5 @@
-import { UsersThree } from "phosphor-react-native";
 import styled from "styled-components/native";
+import { UsersThree } from "phosphor-react-native";
 
 export const Container = styled.View`
   flex: 1;
@@ -14,7 +14,6 @@ export const Content = styled.View`
 
 export const Icon = styled(UsersThree).attrs(({ theme }) => ({
   size: 56,
-  weight: "fill",
   color: theme.COLORS.GREEN_700,
 }))`
   align-self: center;
