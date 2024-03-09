@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Input } from "@components/Input";
 import { Button } from "@components/Button";
 import { Header } from "@components/Header";
@@ -7,10 +8,12 @@ import { useNavigation } from "@react-navigation/native";
 import { Container, Content, Icon } from "./styles";
 
 export function NewGroup() {
+  const [group, setGroup] = useState("");
+
   const navigation = useNavigation();
 
   function handleNewPlayer() {
-    navigation.navigate("players", { group: "Cubo" });
+    navigation.navigate("players", { group });
   }
 
   return (
@@ -25,7 +28,7 @@ export function NewGroup() {
         />
       </Content>
 
-      <Input placeholder="Nome da turma" />
+      <Input placeholder="Nome da turma" onChangeText={setGroup} />
 
       <Button
         title="Criar"
