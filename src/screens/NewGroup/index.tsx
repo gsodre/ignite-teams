@@ -1,9 +1,11 @@
 import { useState } from "react";
+
 import { Input } from "@components/Input";
 import { Button } from "@components/Button";
 import { Header } from "@components/Header";
 import { Highlight } from "@components/Highlight";
 import { useNavigation } from "@react-navigation/native";
+import { groupCreate } from "@storage/group/groupCreate";
 
 import { Container, Content, Icon } from "./styles";
 
@@ -12,8 +14,13 @@ export function NewGroup() {
 
   const navigation = useNavigation();
 
-  function handleNewPlayer() {
-    navigation.navigate("players", { group });
+  async function handleNewPlayer() {
+    try {
+      await groupCreate(group);
+      navigation.navigate("players", { group });
+    } catch (error) {
+      console.log("*** error", error);
+    }
   }
 
   return (
