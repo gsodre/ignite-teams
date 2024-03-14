@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Alert } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
 import { Input } from "@components/Input";
@@ -9,7 +10,6 @@ import { Highlight } from "@components/Highlight";
 import { groupCreate } from "@storage/group/groupCreate";
 
 import { Container, Content, Icon } from "./styles";
-import { Alert } from "react-native";
 
 export function NewGroup() {
   const [group, setGroup] = useState("");
